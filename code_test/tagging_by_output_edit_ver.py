@@ -76,7 +76,7 @@ def drawboxplot_sep(sepfig_width, sepfig_height, df, input_vals):
         quartile_3 = round(info['75%'], 1)
         median = round(info['50%'], 1)
 
-        string = str("Recommendation(25%%): %s\nRecommendation(75%%): %s" % (quartile_1, quartile_3)).decode('utf-8')
+        string = str("Recommendation(25%%): %s\nRecommendation(75%%): %s" %(quartile_1, quartile_3)) #.decode('utf-8')
 
         if (i < 3) and (input_vals[i] != None) :
             input_v = float(input_vals[i])
@@ -89,7 +89,7 @@ def drawboxplot_sep(sepfig_width, sepfig_height, df, input_vals):
             else:
                 efficiency = 'Waste(-) %s%%' % (abs(efficiency))
               
-            string += str('\n\nRecommendation(median): %s\nPresent: %s\n\nEfficiency -> %s' % (median, present, efficiency)).decode('utf-8')
+            string += str('\n\nRecommendation(median): %s\nPresent: %s\n\nEfficiency -> %s' % (median, present, efficiency)) #.decode('utf-8')
         else:
             string += str('\n\nRecommendation(median): %s' % (median)).decode('utf-8')
 
@@ -100,7 +100,7 @@ def drawboxplot_sep(sepfig_width, sepfig_height, df, input_vals):
 
 
 # 넥스지 CSV 데이터를 불러오고, 필요없는 컬럼을 삭제함
-data = pd.read_csv('./data/prod_out_4_180923-181005_hschoi.csv', encoding='utf-8')
+data = pd.read_csv('../../code_test_eiot/prod_out_4_180923-181005_hschoi.csv', encoding='utf-8')
 del data['Unnamed: 25']
 del data['epoch const']
 
