@@ -144,4 +144,4 @@ result = result[result.notnull()]
 
 
 # 그래프를 그리기
-drawboxplot_sep(10, 2.5, result, input_vals)
+drawboxplot_sep(9, 2.5, result, input_vals)
