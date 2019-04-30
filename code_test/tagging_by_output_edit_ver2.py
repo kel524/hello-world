@@ -100,7 +100,7 @@ def drawboxplot_sep(sepfig_width, sepfig_height, df, input_vals):
 
 
 # 넥스지 CSV 데이터를 불러오고, 필요없는 컬럼을 삭제함
-data = pd.read_csv('../../code_test_eiot/prod_out_4_180923-181005_hschoi.csv', encoding='utf-8')
+data = pd.read_csv('../../Raw_data/prod_out_4_180923-181005_hschoi.csv', encoding='utf-8')
 del data['Unnamed: 25']
 del data['epoch const']
 
